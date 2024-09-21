@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styleform.css">
+    <title>Form Mahasiswa</title>
+</head>
+<body>
+    <h1>Form Mahasiswa</h1>
+    <button id="inputButton">Klik Untuk Masukkan Data</button>
+
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('inputButton').onclick = function() {
+            let nama = prompt("Masukkan Nama:");
+            let npm = prompt("Masukkan NPM:");
+
+            let output = `
+                <h2>Data yang Dimasukkan:</h2>
+                <p><strong>Nama:</strong> ${nama}</p> 
+                <p><strong>NIM:</strong> ${npm}</p>
+            `;
+            document.getElementById('output').innerHTML = output;
+        };
+    </script>
+</body>
+</html>
